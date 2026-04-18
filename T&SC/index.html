@@ -602,7 +602,9 @@ body {
     <div class="secure-content">
       <h2>Looking to Secure and Strengthen Your IT Infrastructure?</h2>
       <p>Contact us today to discuss your IT security and infrastructure needs.</p>
-      <a href="#" class="secure-btn">Let's Talk</a>
+      <a href="#" class="secure-btn" onclick="openConsultationModal(); return false;">
+Let's Talk
+</a>
     </div>
   </div>
 </section>
@@ -802,6 +804,9 @@ body: formData
 alert("Submitted Successfully");
 
 modal.style.display="none";
+  function openConsultationModal(){
+document.getElementById("myModal").style.display="block";
+}
 
 }
 </script>
