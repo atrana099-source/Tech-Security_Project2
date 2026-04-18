@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Services - Tech&Security IT Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #1a1a2e;
+}
+
+/* ========== HEADER ========== */
+.ts-header {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ts-header-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  flex-wrap: wrap;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ts-logo {
+  height: 55px;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a1f44;
+  letter-spacing: -0.3px;
+}
+
+.ts-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.ts-nav a {
+  color: #1a1a2e;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.ts-nav a:hover {
+  color: #00c2ff;
+}
+
+.ts-btn {
+  background: #00c2ff;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.ts-btn:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+}
+
+/* ========== SERVICES PAGE HERO ========== */
+.services-hero {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0a1f44 0%, #1a3a6e 100%);
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.services-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.services-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* ========== SERVICES GRID ========== */
+.services-page {
+  padding: 80px 40px;
+  background: white;
+}
+
+.services-page h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1f44;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.services-subtitle {
+  text-align: center;
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.service-card {
+  background: #f8faff;
+  padding: 40px 25px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: 4px solid #00c2ff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+  background: #ffffff;
+}
+
+.service-card i {
+  font-size: 50px;
+  color: #00c2ff;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ========== CTA SECTION ========== */
+.service-cta {
+  background: #f0f9e8;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.service-cta h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 15px;
+}
+
+.service-cta p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  background: #00c2ff;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #0099cc;
+  transform: translateY(-3px);
+}
+
+/* ========== GET IN TOUCH FORM ========== */
+.get-in-touch-section {
+  padding: 80px 40px;
+  background: white;
+  text-align: center;
+}
+
+.get-in-touch-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 10px;
+}
+
+.get-in-touch-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-form-box {
+  max-width: 600px;
+  margin: auto;
+  background: #f8faff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+  outline: none;
+  border-color: #00c2ff;
+  box-shadow: 0 0 5px rgba(0,194,255,0.3);
+}
+
+.contact-form-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form-box button {
+  background: #00c2ff;
+  color: white;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.contact-form-box button:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+}
+
+/* ========== FOOTER ========== */
+.main-footer {
+  background: #1a2a3a;
+  color: white;
+  padding: 60px 40px 0;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 65px;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.footer-box h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-box a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #00c2ff;
+  transform: translateX(5px);
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2a3a4a;
+  color: white;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer-social .fb:hover { background: #1877f2; }
+.footer-social .ig:hover { background: #e4405f; }
+.footer-social .li:hover { background: #0077b5; }
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background: #0f1a24;
+  font-size: 13px;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+/* ========== MODAL ========== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-box button {
+  background: #00c2ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  .ts-nav {
+    gap: 20px;
+    justify-content: center;
+  }
+  .services-hero {
+    margin-top: 120px;
+    padding: 50px 20px;
+  }
+  .services-hero h1 {
+    font-size: 32px;
+  }
+  .services-hero p {
+    font-size: 14px;
+  }
+  .services-page {
+    padding: 50px 20px;
+  }
+  .services-page h2 {
+    font-size: 28px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-card {
+    padding: 30px 20px;
+  }
+  .service-cta {
+    padding: 40px 20px;
+  }
+  .service-cta h2 {
+    font-size: 24px;
+  }
+  .get-in-touch-section {
+    padding: 50px 20px;
+  }
+  .get-in-touch-section h2 {
+    font-size: 28px;
+  }
+  .contact-form-box {
+    padding: 25px;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 14px;
+  }
+  .ts-logo {
+    height: 40px;
+  }
+  .ts-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="ts-header">
+  <div class="ts-header-container">
+    <div class="logo-box">
+      <img src="images/logo.jpeg" class="ts-logo" alt="Logo">
+      <span class="company-name">Tech&Security IT Services</span>
+    </div>
+    <nav class="ts-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" class="ts-btn" onclick="openConsultationModal(); return false;">Free Consultation</a>
+  </div>
+</header>
+
+<!-- SERVICES HERO -->
+<section class="services-hero">
+  <h1>Our Services</h1>
+  <p>Enterprise IT solutions designed to secure, optimize, and scale your business.</p>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-page">
+  <h2>Services</h2>
+  <p class="services-subtitle">Enterprise IT solutions designed to secure, optimize, and scale your business.</p>
+  <div class="services-grid">
+
+    <a href="service-managed-it.html" class="service-card">
+      <i class="fas fa-server"></i>
+      <h3>IT Infrastructure Support</h3>
+      <p>Complete IT management, server support, monitoring, backup and AMC services.</p>
+    </a>
+
+    <a href="service-firewall.html" class="service-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Cyber Security & Firewall</h3>
+      <p>Fortigate, SonicWall, VPN, endpoint security and enterprise protection.</p>
+    </a>
+
+    <a href="service-cloud.html" class="service-card">
+      <i class="fas fa-cloud"></i>
+      <h3>Cloud & AWS Solutions</h3>
+      <p>Cloud migration, AWS EC2, storage solutions, disaster recovery and optimization.</p>
+    </a>
+
+    <a href="service-hosting.html" class="service-card">
+      <i class="fas fa-code"></i>
+      <h3>Website Development & Hosting</h3>
+      <p>Professional corporate websites, portals, and high-performance hosting solutions.</p>
+    </a>
+
+    <a href="service-licenses.html" class="service-card">
+      <i class="fas fa-microsoft"></i>
+      <h3>Microsoft & Google Licenses</h3>
+      <p>Microsoft 365, Google Workspace enterprise licensing and deployment services.</p>
+    </a>
+
+    <a href="service-antivirus.html" class="service-card">
+      <i class="fas fa-virus"></i>
+      <h3>Antivirus & Endpoint Security</h3>
+      <p>Enterprise endpoint protection using Kaspersky, ESET, and other solutions.</p>
+    </a>
+
+    <a href="service-server.html" class="service-card">
+      <i class="fas fa-database"></i>
+      <h3>Dedicated Servers & Infrastructure</h3>
+      <p>Enterprise servers, datacenter infrastructure and storage solutions.</p>
+    </a>
+
+    <a href="service-seo.html" class="service-card">
+      <i class="fas fa-chart-line"></i>
+      <h3>SEO & Website Ranking</h3>
+      <p>SEO optimization, Google ranking, digital marketing support.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="service-cta">
+  <h2>Need Expert IT Support?</h2>
+  <p>Talk to our certified IT professionals today.</p>
+  <a href="#" class="cta-btn" onclick="openConsultationModal(); return false;">Get Free Consultation →</a>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="get-in-touch-section">
+  <h2>Get in Touch</h2>
+  <p>Discuss with our expert</p>
+  <div class="contact-form-box">
+    <input type="text" id="contactName" placeholder="Your Name">
+    <input type="email" id="contactEmail" placeholder="Email Address">
+    <input type="tel" id="contactPhone" placeholder="Phone Number">
+    <textarea id="contactMessage" placeholder="Your Message"></textarea>
+    <button onclick="submitContactForm()">Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <img src="images/logo.jpeg" class="footer-logo" alt="Logo">
+      <p>Long Established Cybersecurity company.</p>
+      <div class="footer-social">
+        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="li"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-box">
+      <h3>Contact Details</h3>
+      <p>Email: info@techsecurity.co.in</p>
+      <p>Phone: +91 9805885586, +91 8595237962, +91 9999249940</p>
+    </div>
+    <div class="footer-box">
+      <h3>Let's Connect</h3>
+      <p>Give us a call or drop by anytime, we will answer all enquiries within 24 hours on business days.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2026 Tech&Security IT Services
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="myModal" class="modal">
+  <div class="modal-box">
+    <span class="close">&times;</span>
+    <h3>Free Consultation</h3>
+    <input id="name" type="text" placeholder="Your Name">
+    <input id="email" type="email" placeholder="Your Email">
+    <input id="phone" type="tel" placeholder="Phone Number">
+    <button id="submitBtn">Submit</button>
+  </div>
+</div>
+
+<script>
+// Modal functionality
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+function openConsultationModal() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+document.getElementById("submitBtn").onclick = function() {
+  var formData = new FormData();
+  formData.append("name", document.getElementById("name").value);
+  formData.append("email", document.getElementById("email").value);
+  formData.append("phone", document.getElementById("phone").value);
+
+  fetch("https://script.google.com/macros/s/AKfycbyeOwmuiH4aahoQFOxOl1rrlbQWw-ToRLbr37LPJWzz6g4A3Rs69HaYMwyzk7otLK9YUw/exec", {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
+
+  alert("Submitted Successfully");
+  modal.style.display = "none";
+}
+
+// Contact form submit function
+function submitContactForm() {
+  var name = document.getElementById("contactName").value;
+  var email = document.getElementById("contactEmail").value;
+  var phone = document.getElementById("contactPhone").value;
+  var message = document.getElementById("contactMessage").value;
+  
+  if(name && email && phone) {
+    alert("Thank you! We will get back to you within 24 hours.");
+    document.getElementById("contactName").value = "";
+    document.getElementById("contactEmail").value = "";
+    document.getElementById("contactPhone").value = "";
+    document.getElementById("contactMessage").value = "";
+  } else {
+    alert("Please fill all required fields.");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>About Us - Tech&Security IT Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #1a1a2e;
+}
+
+/* ========== HEADER (same as home page) ========== */
+.ts-header {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ts-header-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  flex-wrap: wrap;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ts-logo {
+  height: 55px;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a1f44;
+  letter-spacing: -0.3px;
+}
+
+.ts-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.ts-nav a {
+  color: #1a1a2e;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.ts-nav a:hover {
+  color: #00c2ff;
+}
+
+.ts-btn {
+  background: #00c2ff;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.ts-btn:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+}
+
+/* ========== ABOUT HERO SECTION ========== */
+.about-hero {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0a1f44 0%, #1a3a6e 100%);
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* ========== ABOUT MAIN SECTION ========== */
+.about-main {
+  padding: 80px 40px;
+  background: white;
+}
+
+.about-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-content h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: #00c2ff;
+  border-radius: 2px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ========== OFFERINGS SECTION ========== */
+.offerings-section {
+  padding: 80px 40px;
+  background: #f0f9e8;
+  text-align: center;
+}
+
+.offerings-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 12px;
+}
+
+.offerings-section > p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.offer-box {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  transition: 0.3s;
+  border-bottom: 4px solid #00c2ff;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.offer-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+
+.offer-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0a1f44;
+}
+
+.offer-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========== WHY US SECTION ========== */
+.why-section {
+  padding: 80px 40px;
+  background: white;
+  text-align: center;
+}
+
+.why-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.why-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 30px;
+}
+
+.why-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ========== TEAM SECTION ========== */
+.team-section {
+  padding: 80px 40px;
+  background: #f0f9e8;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.team-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.team-icon {
+  width: 100px;
+  height: 100px;
+  background: #00c2ff20;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.team-icon i {
+  font-size: 45px;
+  color: #00c2ff;
+}
+
+.team-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a1f44;
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ========== CTA SECTION ========== */
+.cta-section {
+  background: #0a1f44;
+  padding: 60px 40px;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  background: #00c2ff;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #0099cc;
+  transform: translateY(-3px);
+}
+
+/* ========== FOOTER (same as home page) ========== */
+.main-footer {
+  background: #1a2a3a;
+  color: white;
+  padding: 60px 40px 0;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 65px;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.footer-box h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-box a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #00c2ff;
+  transform: translateX(5px);
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2a3a4a;
+  color: white;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer-social .fb:hover { background: #1877f2; }
+.footer-social .ig:hover { background: #e4405f; }
+.footer-social .li:hover { background: #0077b5; }
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background: #0f1a24;
+  font-size: 13px;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+/* ========== RESPONSIVE (mobile friendly) ========== */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .offerings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  .ts-nav {
+    gap: 20px;
+    justify-content: center;
+  }
+  .about-hero {
+    margin-top: 120px;
+    padding: 50px 20px;
+  }
+  .about-hero h1 {
+    font-size: 28px;
+  }
+  .about-hero p {
+    font-size: 14px;
+  }
+  .about-main {
+    padding: 50px 20px;
+  }
+  .about-content h2 {
+    font-size: 28px;
+  }
+  .offerings-section {
+    padding: 50px 20px;
+  }
+  .offerings-section h2 {
+    font-size: 28px;
+  }
+  .offerings-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-section {
+    padding: 50px 20px;
+  }
+  .why-section h2 {
+    font-size: 28px;
+  }
+  .team-section {
+    padding: 50px 20px;
+  }
+  .team-section h2 {
+    font-size: 28px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-section h2 {
+    font-size: 24px;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 14px;
+  }
+  .ts-logo {
+    height: 40px;
+  }
+  .ts-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+/* Modal (same as home page) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-box input, .modal-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-box button {
+  background: #00c2ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER (same as home page) -->
+<header class="ts-header">
+  <div class="ts-header-container">
+    <div class="logo-box">
+      <img src="images/logo.jpeg" class="ts-logo" alt="Logo">
+      <span class="company-name">Tech&Security IT Services</span>
+    </div>
+    <nav class="ts-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" class="ts-btn" onclick="openConsultationModal(); return false;">Free Consultation</a>
+  </div>
+</header>
+
+<!-- ABOUT HERO SECTION -->
+<section class="about-hero">
+  <h1>About Us</h1>
+  <p>Your trusted partner in IT infrastructure, cybersecurity, and cloud solutions</p>
+</section>
+
+<!-- ABOUT MAIN CONTENT -->
+<section class="about-main">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Tech&Security Team">
+    </div>
+    <div class="about-content">
+      <h2>Who We Are</h2>
+      <p>
+        Tech&Security is a growing IT services startup delivering enterprise-grade IT, cloud, and cybersecurity solutions to businesses. Our team consists of highly experienced IT professionals with over 20 to 25 years of industry expertise in infrastructure management, cloud technologies, cybersecurity, and enterprise IT solutions.
+      </p>
+      <p>
+        We specialize in managed IT services, server and network infrastructure, firewall security, cloud solutions, website development, and enterprise licensing solutions. Our mission is to help organizations secure, optimize, and scale their IT environments with reliable and cost-effective solutions.
+      </p>
+      <p>
+        As a startup, we focus on building long-term client trust by delivering high-quality services, fast support, and innovative IT solutions tailored to business needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR OFFERINGS SECTION -->
+<section class="offerings-section">
+  <h2>Our Offerings</h2>
+  <p>Comprehensive IT solutions for modern businesses</p>
+  <div class="offerings-grid">
+    <div class="offer-box">
+      <h3>Managed IT & Server Support</h3>
+      <p>Complete management of Linux and Windows servers, Active Directory, backups, monitoring, and IT AMC services.</p>
+    </div>
+    <div class="offer-box">
+      <h3>Firewall & Cyber Security</h3>
+      <p>Enterprise firewall solutions including Fortigate and SonicWall with VPN, security policies, and network protection.</p>
+    </div>
+    <div class="offer-box">
+      <h3>Cloud & AWS Solutions</h3>
+      <p>Cloud migration, AWS EC2, storage solutions, disaster recovery, and cost optimization for enterprises.</p>
+    </div>
+    <div class="offer-box">
+      <h3>Website Development & Hosting</h3>
+      <p>Professional corporate websites, portals, and high-performance hosting solutions.</p>
+    </div>
+    <div class="offer-box">
+      <h3>Microsoft & Google Licenses</h3>
+      <p>Microsoft 365, Google Workspace enterprise licensing and deployment services.</p>
+    </div>
+    <div class="offer-box">
+      <h3>Antivirus & Endpoint Security</h3>
+      <p>Enterprise endpoint protection using Kaspersky, ESET, and other security solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US SECTION -->
+<section class="why-section">
+  <div class="why-container">
+    <h2>Why Tech&Security?</h2>
+    <p>
+      Tech&Security is a growing IT services startup built by highly experienced IT professionals with decades of industry experience. We understand enterprise IT environments and provide reliable, secure, and scalable solutions to businesses.
+    </p>
+    <p>
+      Our focus is on building long-term client trust by delivering high-quality IT services, fast response support, and customized technology solutions. We ensure businesses operate securely, efficiently, and without downtime by providing proactive IT management and security solutions.
+    </p>
+    <p>
+      We believe in transparent pricing, 24/7 support availability, and a customer-first approach that sets us apart from traditional IT service providers.
+    </p>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team-section">
+  <h2>Our Leadership Team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-icon"><i class="fas fa-user-tie"></i></div>
+      <h3>20+ Years Experience</h3>
+      <p>Industry veterans with deep expertise in IT infrastructure</p>
+    </div>
+    <div class="team-card">
+      <div class="team-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Cybersecurity Experts</h3>
+      <p>Certified professionals in enterprise security solutions</p>
+    </div>
+    <div class="team-card">
+      <div class="team-icon"><i class="fas fa-cloud"></i></div>
+      <h3>Cloud Specialists</h3>
+      <p>AWS, Azure, and hybrid cloud architecture experts</p>
+    </div>
+    <div class="team-card">
+      <div class="team-icon"><i class="fas fa-headset"></i></div>
+      <h3>24/7 Support</h3>
+      <p>Round-the-clock technical assistance for your business</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <h2>Ready to Secure Your Business?</h2>
+  <p>Get a free consultation from our IT experts today</p>
+  <a href="#" class="cta-btn" onclick="openConsultationModal(); return false;">Get Free Consultation →</a>
+</section>
+
+<!-- FOOTER (same as home page) -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <img src="images/logo.jpeg" class="footer-logo" alt="Logo">
+      <p>Long Established Cybersecurity & IT Solutions company.</p>
+      <div class="footer-social">
+        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="li"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-box">
+      <h3>Contact Details</h3>
+      <p>Email: info@techsecurity.co.in</p>
+      <p>Phone: +91 9805885586, +91 8595237962, +91 9999249940</p>
+    </div>
+    <div class="footer-box">
+      <h3>Let's Connect</h3>
+      <p>Give us a call or drop by anytime, we will answer all enquiries within 24 hours.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2026 Tech&Security IT Services
+  </div>
+</footer>
+
+<!-- MODAL (same as home page) -->
+<div id="myModal" class="modal">
+  <div class="modal-box">
+    <span class="close">&times;</span>
+    <h3>Free Consultation</h3>
+    <input id="name" type="text" placeholder="Your Name">
+    <input id="email" type="email" placeholder="Your Email">
+    <input id="phone" type="tel" placeholder="Phone Number">
+    <button id="submitBtn">Submit</button>
+  </div>
+</div>
+
+<script>
+// Modal functionality
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+function openConsultationModal() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+document.getElementById("submitBtn").onclick = function() {
+  var formData = new FormData();
+  formData.append("name", document.getElementById("name").value);
+  formData.append("email", document.getElementById("email").value);
+  formData.append("phone", document.getElementById("phone").value);
+
+  fetch("https://script.google.com/macros/s/AKfycbyeOwmuiH4aahoQFOxOl1rrlbQWw-ToRLbr37LPJWzz6g4A3Rs69HaYMwyzk7otLK9YUw/exec", {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
+
+  alert("Submitted Successfully");
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
